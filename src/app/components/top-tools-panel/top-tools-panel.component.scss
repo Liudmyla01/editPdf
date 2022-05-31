@@ -1,0 +1,21 @@
+.topPanel{
+    background-color: #e0e8e9;
+    width: 100%;
+    .canselsBtns{
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        &__Undo, &__Redo{
+            background: none;
+        }
+    }
+    .searchDoc{
+        margin: 11px;
+        width: 20%;
+        border-bottom: 1px solid;
+        padding: 4px 34px 4px 4px;
+        background: url('../../../assets/search.svg') no-repeat;
+        background-position: 94% 58%;
+    }
+}

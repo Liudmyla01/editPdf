@@ -1,0 +1,45 @@
+@import '../../../theme/mixins';
+@import '../../../theme/color';
+
+.elementWrapper{
+    margin: 0 11px;
+    .title{
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+      }
+    .lineAndShapes{
+        &__elements{
+            &>*{
+                margin-right: 12px
+            }
+            .circle{
+                @include size(40px);
+                border-radius: 50%;
+                display: inline-block;
+                background-color: $main;          
+            }
+            .square {
+                @include size(40px);
+                display: inline-block;
+                background-color: $main
+              }
+              .triangle{
+                @include size(0);
+                position: absolute;
+                border-bottom: 40px solid $main;
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+              }
+        }
+          
+    }
+    .icons{
+        .icons__elements {
+            & > *{
+                height: 40px;
+                margin: 12px;
+            }
+        }
+    }
+}

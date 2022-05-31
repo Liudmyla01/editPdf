@@ -1,0 +1,14 @@
+<nav class="nav__container">
+    <ul class="nav__container-tools">
+        <li *ngFor="let tool of allTools" (click)="showToolsPanel(tool)">
+            <img src="{{tool.src}}">{{tool.name}}
+        </li>
+    </ul>
+    <div [ngSwitch]="tool" class="nav__container-toolsPanel">
+        <input type="text" class="nav__container-toolsPanel--search">
+        <ng-template ngSwitchCase="Elements"><app-elements-tools></app-elements-tools></ng-template>
+        <ng-template ngSwitchCase="Text" ><app-text-tools></app-text-tools></ng-template>
+        <ng-template ngSwitchCase="Images"><app-images-tools></app-images-tools></ng-template>
+        <ng-template ngSwitchCase="Background"><app-background-tools></app-background-tools></ng-template>
+    </div>
+</nav>

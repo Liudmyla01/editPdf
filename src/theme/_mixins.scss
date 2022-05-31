@@ -1,0 +1,9 @@
+@mixin selfPosition($justify:center,$alain:center){
+  justify-self: $justify; 
+  align-self: $alain; 
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

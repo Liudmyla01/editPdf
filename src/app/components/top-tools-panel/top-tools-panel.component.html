@@ -1,0 +1,10 @@
+<div class="topPanel d-flex justify-content-between">
+    <div class="canselsBtns">
+        <button class="canselsBtns__Undo"><i class="bi bi-arrow-90deg-left"></i></button>
+        <button class="canselsBtns__Redo"><i class="bi bi-arrow-90deg-right"></i></button>
+    </div>
+    <div class="downloadBtn">
+        <button [disabled]="!file" type="button" class="btn btn-success">Download</button>
+    </div>
+    <input type="text" class="searchDoc" placeholder="search page ...">
+</div>

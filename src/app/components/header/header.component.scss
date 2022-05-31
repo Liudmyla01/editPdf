@@ -1,0 +1,26 @@
+@import '../../../theme/color';
+@import '../../../theme/mixins';
+
+.header__container{
+    height: 50px;
+    background-color: $main;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 0.7fr 1.3fr 1fr; 
+    &-logo{
+        @include selfPosition();
+        font-size: large;
+        font-weight: 600;
+    }
+    &-chooseFile{
+        @include selfPosition();
+        grid-area: 1 / 2 / 2 / 3; 
+    }
+    &-actionBtn{
+        @include selfPosition(stretch);
+        grid-area: 1 / 3 / 2 / 4;
+        display: flex;
+        justify-content: space-around;
+    }
+}

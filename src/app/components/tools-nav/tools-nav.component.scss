@@ -1,0 +1,46 @@
+@import '../../../theme/color';
+@import '../../../theme/mixins';
+
+.nav__container{
+    height: 100%;
+    background-color: $nav;
+    display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 0.7fr 1.3fr; 
+  grid-template-rows: 1fr; 
+  grid-template-areas: 
+    "nav panel"; 
+  grid-area: navTools; 
+  &-tools{
+      grid-area: nav;
+      margin-top: 30px;
+      & > * {
+          color: white;
+          text-align: center;
+          padding: 8px;
+          margin-top: 12px;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          &:hover{
+              background-color: $navPanel;
+            }
+            & img{
+              height: 30px;
+          }
+      }
+    }
+
+  &-toolsPanel{
+    grid-area: panel;
+    background-color: $navPanel;
+    &--search{
+        margin: 11px;
+        width: 85%;
+        border: 1px solid;
+        padding: 4px 34px 4px 4px;
+        background: url('../../../assets/search.svg') no-repeat;
+        background-position: 94% 58%;
+    }
+  }
+}
